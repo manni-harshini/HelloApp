@@ -1,14 +1,16 @@
 public class HelloApp {
+
     public static void main(String[] args) {
 
-        String name;
-
-        if (args.length > 0) {
-            name = args[0];        // user provided name
+        if (args.length == 0) {
+            System.out.println("Hello World");
         } else {
-            name = "World";       // default value
+
+            for (String name : args) {
+                System.out.println("Hello " + name);
+            }
+
         }
 
-        System.out.println("Hello " + name);
     }
 }
